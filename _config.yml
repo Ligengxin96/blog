@@ -26,13 +26,13 @@ blog:
 
 # Author info
 author:
-  fullname                  : Your Name
+  fullname                  : ligengxin
   rss                       : true # generate RSS feed and show it's icon in header
-  mail                      : your@email.com # change to your e-mail address
-  twitter                   : twitter-user-name
-  github                    : github-user-name
-  youtube                   : youtube-user-name
-  stackoverflow             : stackoverflow-user-name
+  mail                      : Ligengxin96@gmail.com # change to your e-mail address
+  twitter                   : Ligengxin1
+  github                    : Ligengxin96
+  # youtube                   : youtube-user-name
+  # stackoverflow             : stackoverflow-user-name
   disqus                    : dactl # your disqus site name
   google_analytics          : # 'UA-XXXXXXXX-X'
   photo                     : "uploads/me2.png"

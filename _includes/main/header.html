@@ -7,7 +7,7 @@
       </div>
 
         <ul>
-            <li><a href="{{ '/about' | prepend: site.baseurl }}">about</a></li>
+            <li><a href="{{ '/about' | prepend: site.baseurl }}">about me</a></li>
             <li><a href="{{ '/archive' | prepend: site.baseurl }}">archive</a></li>
         </ul>
     </div>
@@ -49,11 +49,11 @@
         </li>
         {% endif %}
         {% if site.author.rss == true %}
-        <li>
+        <!-- <li>
             <a href="{{ '/feed.xml' | prepend: site.baseurl }}" target="_blank">
                 <span class="icon-rss_feed"></span>
             </a>
-        </li>
+        </li> -->
         {% endif %}
         <li>
             <a href="#" onclick="switchTheme()" title="Switch theme?">

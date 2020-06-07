@@ -2,7 +2,8 @@
 layout: post
 title: '发布项目到服务器-1'
 tags:
-  -
+  - 踩坑
+  - 华为云
 hero: https://source.unsplash.com/collection/145103/
 overlay: gray
 ---

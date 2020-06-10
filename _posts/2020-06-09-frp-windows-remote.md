@@ -5,7 +5,7 @@ tags:
   - 工具
   - 技术
 hero: https://source.unsplash.com/collection/145114/
-overlay: gray
+overlay: blue
 ---
 &emsp;&emsp;公司不允许安装非授权的软件,所以迫于无奈,只能放弃teamviewer这些远程软件,只能使用window自带的远程桌面.
 <!–-break-–>

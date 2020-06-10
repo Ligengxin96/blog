@@ -48,6 +48,7 @@ author:
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-admin
 
 # Permalinks
 permalink                    : posts/:slug

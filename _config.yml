@@ -1,7 +1,7 @@
 # Base blog settings
 baseurl                      : "" # the subpath of your site,                         # e.g. /blog/
                               # set to '' in case of hosting on GitHub
-url                          : "" # the base hostname & protocol for your site
+url                          : "https://ligengxin96.github.io/blog/" # the base hostname & protocol for your site
                                   # `http://<username>.github.io` - for GitHub
 
 blog:
@@ -11,7 +11,7 @@ blog:
 
 # Layout configuration
   logo_path                  : "assets/img/dactl.svg" # path to logo file
-  search_path                : # "yourgitusername.github.io"
+  search_path                : "blog.ligengxin.me" # "yourgitusername.github.io"
                                # needed for searchbox in archive page
   hero_layout                : true # turn on hero layout for blog and posts
   hero_placeholder           : "assets/img/generic_hero.jpg" # placeholder for hero image
@@ -33,7 +33,7 @@ author:
   github                    : Ligengxin96
   # youtube                   : youtube-user-name
   # stackoverflow             : stackoverflow-user-name
-  disqus                    : dactl # your disqus site name
+  disqus                    : blog.ligengxin.me # your disqus site name
   google_analytics          : # 'UA-XXXXXXXX-X'
   photo                     : "uploads/me2.png"
   photo2x                   : "uploads/me.png"

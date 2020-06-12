@@ -2,10 +2,9 @@
 layout: post
 title: '发布项目到服务器-2'
 tags:
-  - 踩坑
-  - 华为云
+  - issue
 hero: https://source.unsplash.com/collection/145102/
-overlay: 
+overlay: green
 ---
 &emsp;&emsp;解决了 [昨天的问题](/posts/publis-project-to-service-1),成功把项目发布到了80端口,可是发现进来默认是我第一个玩具项目,
 于是尝试把项目切换到一个新端口上,可是问题又出现了.

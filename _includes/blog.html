@@ -47,8 +47,8 @@
 
         <span>
           {% for tag in post.tags %}
-              <!-- <a href="{{ 'tag/' | relative_url }}{{ tag }}">#{{ tag }}</a> -->
-              <a>#{{ tag }}</a>
+              <a href="{{ 'tag/' | relative_url }}{{ tag }}">#{{ tag }}</a>
+              <!-- <a>#{{ tag }}</a> -->
           {% endfor %}
         </span>
       </div>

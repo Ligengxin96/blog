@@ -2,8 +2,8 @@
 layout: post
 title: '使用frp实现windows远程桌面连接'
 tags:
-  - 工具
-  - 技术
+  - tools
+  - technology
 hero: https://source.unsplash.com/collection/145114/
 overlay: blue
 ---
@@ -69,10 +69,8 @@ frpc.ini 的配置如下
   // 不后台运行
   ./frps -c ./frps.ini
 {% endhighlight %}
-
+  
 客户端: 进入解压出来的文件夹
-
-
 {% highlight bash %} 
   // cdm的话就 输入
   frpc -c frpc.ini

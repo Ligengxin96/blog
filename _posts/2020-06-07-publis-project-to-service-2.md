@@ -29,7 +29,7 @@ overlay: green
 
 ## 附上我的Nginx的配置文件
 这是我有别于 [参考资料](https://segmentfault.com/a/1190000019442994) 的nginx配置文件,其他配置和其一致
-```
+{% highlight bash %}
 server {
 
   listen 8000; // 端口号
@@ -44,5 +44,5 @@ server {
     try_files $uri $uri/ =404;
   }
 }
-```
+{% endhighlight %}
 

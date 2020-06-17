@@ -126,6 +126,6 @@ gitalk:
   clientSecret            : eb71cbb94119b98399fc75ff41ebc047730207d8
   repo                    : 'jekyllBlog'
   owner                   : 'Ligengxin96'
-  admin                   : ['Ligengxin96']
+  admin                   : 'Ligengxin96'
   id                      : location.pathname
   distractionFreeMode     : false

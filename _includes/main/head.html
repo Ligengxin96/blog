@@ -36,10 +36,11 @@
 <meta property="og:description" content="{{ description }}">
 <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
 <meta property="og:site_name" content="{{ site.blog.title }}">
-
+{% seo %}
 <!-- Styles -->
 <link rel="stylesheet" href="{{ "assets/vendor/normalize-css/normalize.css" | relative_url }}">
 <link rel="stylesheet" href="{{ "assets/css/main.css" | relative_url }}">
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 
 {% if site.blog.load_google_fonts %}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ site.blog.load_google_fonts }}">
@@ -53,3 +54,4 @@
 {% if site.blog.inline_footnotes == true %}
 <link rel="stylesheet" href="{{ "assets/css/bf.css" | relative_url }}">
 {% endif %}
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>

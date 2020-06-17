@@ -49,11 +49,11 @@
         </li>
         {% endif %}
         {% if site.author.rss == true %}
-        <!-- <li>
-            <a href="{{ '/feed.xml' | prepend: site.baseurl }}" target="_blank">
+        <li>
+            <a href="{{ '/feed.xml' | prepend: site.baseurl }}" target="_blank" title="RSS">
                 <span class="icon-rss_feed"></span>
             </a>
-        </li> -->
+        </li>
         {% endif %}
         <li>
             <a href="#" onclick="switchTheme()" title="切换主题">

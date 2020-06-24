@@ -4,7 +4,7 @@ title: '项目踩坑-1'
 tags:
   - issue
 hero: https://source.unsplash.com/collection/145105/
-overlay: purple
+overlay: red
 ---
 &emsp;&emsp;负责的一个项目已经部署到客户的生产环境上测试了,接踵而来的是一系列的问题.这也算预料之中,无非是一些环境问题之类的.
 但是有一个问题缺花了一天的时间来定位和解决.

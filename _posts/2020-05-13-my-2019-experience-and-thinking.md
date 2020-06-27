@@ -2,7 +2,7 @@
 layout: post
 title: '第一年的工作经历和想法(2019-2020)'
 tags:
-  - nothing
+  - thinking
 hero: /assets/img/2020/05-13/2019.png
 overlay: orange
 ---

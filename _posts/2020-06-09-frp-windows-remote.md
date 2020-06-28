@@ -107,5 +107,10 @@ C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp 目录下写一个b
   // 顺便放行下 配置文件中出现的 7000 端口
   iptables -A INPUT -p tcp --dport 7000 -j ACCEPT
 {% endhighlight %}
-(2) 服务器重启后需要重新启动下服务,重复步骤3.还有可能还需要重新输入 放行端口的命令
-
+(2) 服务器重启后需要重新启动下服务,重复步骤3.还有还需要重新输入 放行端口的命令,所以保存下配置
+{% highlight bash %} 
+  // 把配置的iptables的内容持久化保存到 名字为foobar的文件中(文件名随意取)
+  iptables-save > foobar
+  // 服务器重启后读取下配置的内容(有需要可以写个脚本重启后自动读取配置文件内容)
+  iptables-restore < foobar
+{% endhighlight %}

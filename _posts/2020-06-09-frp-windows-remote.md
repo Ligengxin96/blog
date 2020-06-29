@@ -3,6 +3,7 @@ layout: post
 title: '使用frp实现windows远程桌面连接'
 tags:
   - tools
+  - tutorial
   - technology
 hero: https://source.unsplash.com/collection/145114/
 overlay: blue

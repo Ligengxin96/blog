@@ -3,7 +3,7 @@ layout: post
 title: 'ubuntu18.04上安装mysql'
 tags:
   - tutorial
-hero: https:#source.unsplash.com/collection/145138/
+hero: https://source.unsplash.com/collection/145138/
 overlay: blue
 ---
 &emsp;&emsp;最近工作是写存储过程.但是又不敢在微软他们数据库中乱操作.虽然有备份,但是搞坏了总不好.刚好最近又买了服务器,那总得用起来嘛.于是网上找教程开始,但是没有一篇文章完整了记录了安装mysql(5.7版本)到ssh远程连接数据库.这又是一篇自己乱撞踩坑的记录.

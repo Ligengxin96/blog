@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '工作踩坑-1'
+title: '存储过程入参默认值问题'
 tags:
   - issue
 hero: https://source.unsplash.com/collection/145131/

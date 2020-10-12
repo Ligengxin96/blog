@@ -16,6 +16,11 @@ overlay: blue
 
 `git revert --hard head`
 
+### 删除分支
+
+- 删除远程分支 `git push origin -d <branchName>`
+- 删除本地分支 `git branch -d <branchName>`
+
 ## VScode 配置
 
 ### 调试Jest测试框架的某个单元测试TS文件

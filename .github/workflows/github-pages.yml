@@ -1,2 +1,10 @@
-- name: Jekyll Actions
+name: Build and deploy Jekyll site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
   uses: helaili/jekyll-action@2.0.4
+

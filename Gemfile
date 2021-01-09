@@ -1,7 +1,7 @@
-source "https://gems.ruby-china.com/"
+source "https://rubygems.org"
 
-gem "jekyll", "~> 3.6"
-gem "rouge", "~> 1.0"
+gem "jekyll", "~> 4.1.0"
+gem "rouge", "~> 3.0"
 
 group :jekyll_plugins do
   gem "jekyll-feed"

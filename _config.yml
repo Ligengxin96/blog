@@ -129,13 +129,3 @@ gitalk:
   admin                   : 'Ligengxin96'
   id                      : location.pathname
   distractionFreeMode     : false
-
-# git action
-asciidoc: {}
-asciidoctor:
-  base_dir: :docdir
-  safe: unsafe
-  attributes:
-    - idseparator=_
-    - source-highlighter=coderay
-    - icons=font

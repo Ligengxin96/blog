@@ -16,25 +16,25 @@ overlay: red
 
 ## 解决方案
 &emsp;&emsp;1. 降低每次请求的时间.配置一个https Agent,设置 keepAlive: true 这样就可以避免每次连接需要进行三次握手节约而降低每次请求的时间.配置结束后测试发现现在一次请求只需要0.3s了.但是这样做显然还是不够,只提升了3倍性能.跑完全部的数据还是需要很长时间.接下来只能提升每秒发送请求的数据了.
-```js
+{% highlight js %}
 const sslConfiguredAgent = new https.Agent({
         cert: fs.readFileSync(process.env.HTTPS_CERT_PATH!),
         key: fs.readFileSync(process.env.HTTPS_KEY_PATH!),
         rejectUnauthorized: false,
         keepAlive: true,
       });
-```
+{% endhighlight %}
 
 2. 提高每秒发送请求的数,这个问题可触及到我的知识盲区了,因为以前就写过前端,对服务端的并发了解并不是很多.不过经过不断的努力的查询资料,终于让我找到了解决办法.使用promise.all 提高每秒发送请求的数.这里promise.all 中存放了100个promise对象,也就是说并发数为100.因为readFilePayload是一个generator函数,所以就算100个并发的去读取文件内容也是能够保证同步的不会读取到用一行的数据.经过这次改进测试发现250,000行数据总用时只需要15分钟.(250000 / 15 / 60 ≈ 278,大致符合提升300倍效率理论数据)
 
-```js
+{% highlight js %}
 const dataSource = utils.readFilePayload(filePath);
 const allPromises: Array<Promise<{resultAry: string[]; errorAry: string[]}>> = [];
 for (let i = 0; i < 100; ++i) {
 allPromises.push(utils.sendRequest(dataSource));
 }
 const results = await Promise.all(allPromises);
-```
+{% endhighlight %}
 
 ## 总结
 &emsp;&emsp;总体来说,这次这个任务让我认识到了node.js的强大,也让我明白了我要走的路还很长.因为我感觉这些代码如果我不去参考别人的内容是否可以写出这样的代码？现在肯定不行.
@@ -42,7 +42,7 @@ const results = await Promise.all(allPromises);
 
 ## 剩余部分关键代码
 worker.ts(执行函数)
-```js 
+{% highlight js %} 
 import * as utils from './utils';
 
 const loadFiles = async() => {
@@ -73,10 +73,10 @@ const main = async(filePath: string): Promise<number> => {
 };
 
 loadFiles();
-```
+{% endhighlight %}
 
 utils.ts(工具函数)
-```js
+{% highlight js %}
 const endpoint = process.env.endpoint;
 const sslConfiguredAgent = new https.Agent({
         cert: fs.readFileSync(process.env.HTTPS_CERT_PATH!),
@@ -153,4 +153,4 @@ export const readFilePayload = async function* (
       }
     }
   }
-```
+{% endhighlight %}

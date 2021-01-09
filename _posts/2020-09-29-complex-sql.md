@@ -11,7 +11,7 @@ overlay: orange
 <!–-break-–>
  
 ## 具体代码
-```sql
+{% highlight sql %}
 WITH source AS (
 SELECT column1,
        column2,
@@ -68,4 +68,4 @@ SELECT DISTINCT column3, column4, column8, column9,
 ) AS incorrectTrend
 FROM sourceWihtTrendFilter AS b 
 GROUP BY column3, column4, column1, column8, column9, column5, column6, column7
-```
+{% endhighlight %}

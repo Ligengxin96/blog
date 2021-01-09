@@ -11,18 +11,18 @@ overlay: blue
 
 ## 问题出现
 
-```sql 
+{% highlight sql %} 
 -- b字段可为null
 select * from A,B where A.a = B.a and A.b = B.b
-```
+{% endhighlight %}
 主要原因是因为SQL Server中 null = null 返回是UNKNOWN, 可以初略的理解为false.
 
 ## 解决方案
 [参考资料stackoverflow的答案](https://stackoverflow.com/questions/1075142/how-to-compare-values-which-may-both-be-null-in-t-sql)
-```sql 
+{% highlight sql %} 
 -- b字段可为null
 select * from A,B where A.a = B.a and (A.b = B.b or ISNULL(A.b, B.b) IS NULL)
-```
+{% endhighlight %}
 
 但是这并不是最优解,因为使用上面我的方法的话可能会有索引问题,就是如果b这个字段添加的索引的话.
 最优解应该是这个问题的推荐答案,但是因为我这次的话不适合,因为会把简单问题复杂化,所以就采用了上面的这个方法.

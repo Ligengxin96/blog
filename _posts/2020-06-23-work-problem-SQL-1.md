@@ -15,17 +15,17 @@ overlay: red
 ## 解决方案
 &emsp;&emsp;如果我没偶然看你的表中的最后一列的数据最后刷新时间的话.我估计能在这个正确的存储过程调试一天.因为偶然看到表的数据的最后刷新时间,发现不是刚刚刷新的,而是几天前.这个时候我就意识到.存储过程没问题,而是没有执行更新数据.为什么没更新数据呢,首先看下存储过程入参的定义
 
-```sql
+{% highlight sql %}
 CREATE PROCEDURE [dbo].[uspMonthlySwaggerKPICalculation]
 	(
 	@env nvarchar(50) = 'prod',
 	@endDate Date
 )
-```
+{% endhighlight %}
 
 很明显,env 这个参数有默认值 'prod',而我在执行的时候却输入的是NULL,为什么会输入NULL呢,是因为我是SSMS里面右键运行存储过程,然后他有个弹窗输入这个存储过程的参数.当时我就想偷个懒.因为env 这个参数有默认值,所以我就不输入,我就勾选了 pass null value(允许空值)选项.这个时候SSMS自动生成了如下的代码并执行.
 
-```sql
+{% highlight sql %}
 DECLARE	@return_value int
 
 EXEC	@return_value = [dbo].[uspMonthlySwaggerKPICalculation]
@@ -35,13 +35,13 @@ EXEC	@return_value = [dbo].[uspMonthlySwaggerKPICalculation]
 SELECT	'Return Value' = @return_value
 
 GO
-```
+{% endhighlight %}
 
 于是乎,env 的默认值并没有取到 'prod',而是被覆盖为了NULL.所以导致你看起来允许了存储过程,但是他缺没查询到任何数据,逻辑里面也就导致没更新任何数据.
 
 &emsp;&emsp;存储过程有默认值的情况下,如果不传那么正确的写法不是传NULL而是这样的
 
-```sql
+{% highlight sql %}
 DECLARE	@return_value int
 
 EXEC	@return_value = [dbo].[uspMonthlySwaggerKPICalculation]
@@ -51,7 +51,7 @@ EXEC	@return_value = [dbo].[uspMonthlySwaggerKPICalculation]
 SELECT	'Return Value' = @return_value
 
 GO
-```
+{% endhighlight %}
 
 ## 总结
 &emsp;&emsp;直接用js的理解来说就是不传就是undefined这个时候sql server就会取默认值.而你如果传了NULL,那就是有值,值是NULL,所以会覆盖掉默认值.

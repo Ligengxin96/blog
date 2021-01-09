@@ -4,13 +4,12 @@ on:
   push:
     branches:
       - master
-before_script:
-  - echo ${{ secrets.JEKYLL_PAT }}
 
 jobs:
   github-pages:
     runs-on: ubuntu-latest
     steps:
+      - script: echo ${{ secrets.JEKYLL_PAT }}
       - uses: actions/checkout@v2
       - uses: helaili/jekyll-action@2.0.5
         env:

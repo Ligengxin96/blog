@@ -4,6 +4,7 @@ title: 'JavaScript高级程序设计第4章总结'
 tags:
   - thinking
   - learning
+  - reading
 hero: https://source.unsplash.com/collection/145179/
 overlay: purple
 ---

@@ -18,10 +18,11 @@ jobs:
         key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
         restore-keys: |
           ${{ runner.os }}-gems-
-    - run: bundle update --bundler
-    - run: gem install bundler:1.17.2
+  
     # Standard usage
     - uses:  helaili/jekyll-action@v2
+      run: bundle update --bundler
+      run: gem install bundler:1.17.2
       env:
         JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
 

@@ -9,7 +9,7 @@ overlay: orange
 &emsp;&emsp;记录下工作中用到的或者其他常用的正则
 <!–-break-–>
 
-```
+```js
   /reg/.test(value) // => reg(正则表达式), value(需要检测的值)
   /\d+/g // 获取字符串中的数字存入数组
   ^\d+$ // 整个字符串是存数字

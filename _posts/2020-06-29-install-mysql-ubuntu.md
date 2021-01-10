@@ -1,17 +1,16 @@
 ---
-layout: post
 title: 'ubuntu18.04上安装mysql'
 tags:
   - tutorial
-hero: https://source.unsplash.com/collection/145138/
-overlay: blue
+categories:
+  - tutorial
 ---
 &emsp;&emsp;最近工作是写存储过程.但是又不敢在微软他们数据库中乱操作.虽然有备份,但是搞坏了总不好.刚好最近又买了服务器,那总得用起来嘛.于是网上找教程开始,但是没有一篇文章完整了记录了安装mysql(5.7版本)到ssh远程连接数据库.这又是一篇自己乱撞踩坑的记录.
-<!–-break-–>
+
  
 ## 卸载mysql
 &emsp;&emsp;为什么首先讲卸载mysql.因为我乱撞乱试后没法恢复了就卸载了.而且卸载过程也遇到了问题.估计是没卸载完全,导致后续没办法安装.讲下我的操作过程如何彻底卸载mysql.
-{% highlight bash %} 
+```bash  
 # 开始卸载,这条卸载命令运行应该没问题
 sudo apt-get autoremove --purge mysql-server
 
@@ -36,12 +35,12 @@ sudo find  / -name mysql -print
 
 # 接下来就手动一个个直接删除
 rm -rf 查询出来的文件名
-{% endhighlight %}
+```
 
 ## 安装mysql和配置远程ssh访问
 
 &emsp;&emsp;安装其实很简单.安装完毕之后的配置最麻烦也是踩坑最多的地方.
-{% highlight bash %} 
+```bash  
 # 首先输入
 sudo apt-get update
 # 安装 中间需要输入yes 的一路yes
@@ -89,10 +88,10 @@ set password for 'username'@'host' = password('newpassword');
 
 # 退出mysql后重启下下mysql
 /etc/init.d/mysql restart
-{% endhighlight %}
+```
 
 ## 接下来设置mysql的一个配置文件
-{% highlight bash %} 
+```bash  
 # 进入目录
 cd etc/mysql/mysql.conf.d/
 # 修改 mysqld.cnf 
@@ -101,18 +100,18 @@ vi mysqld.cnf
 bind-address = 127.0.0.1
 # 保险起见在重启下
 /etc/init.d/mysql restart
-{% endhighlight %}
+```
 
 ## 最后别忘记了放行3306 端口
 1. 首先需要在你买的云服务器的控制台设置安全规则放行3306, 具体操作可以点击查看 [发布项目到服务器_1](/posts/publis-project-to-service-1)
 2. 然后是iptables放行 3306端口
-{% highlight bash %} 
+```bash  
 iptables -A INPUT -p tcp --dport 3306 -j ACCEPT
-{% endhighlight %}
+```
 
 ## 远程终端访问命令(前提需要安装mysql的客户端，这个安装很简单自己百度下就ok)
-{% highlight bash %} 
+```bash  
 mysql -u 数据库用户名 -p数据库用户密码 -h 服务器ip -P 3306
 # 例如 我刚刚创建的用户名是 mycount, 密码是 123456  服务器ip是 123.123.123.123 那么我的命令如下
 mysql -u mycount -p123456 -h 123.123.123.123 -P 3306
-{% endhighlight %}
+```

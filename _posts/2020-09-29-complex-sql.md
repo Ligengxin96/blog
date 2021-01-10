@@ -1,17 +1,16 @@
 ---
-layout: post
 title: '一次复杂的需求的存储过程实现代码'
 tags:
   - tutorial
   - technology
-hero: https://source.unsplash.com/collection/145171/
-overlay: orange
+categories:
+  - technology
 ---
 &emsp;&emsp;这次需求类似于需要对比某个产品的不同月份的销售数据,生成一个趋势的新字段,也就是说如果你的这个产品有4个月的数据的话,那么在这个趋势的字段里面就应该有3个值来描述4个月的趋势变化.难点应该在于如何对比并把生成趋势这个字段.
-<!–-break-–>
+
  
 ## 具体代码
-{% highlight sql %}
+```sql 
 WITH source AS (
 SELECT column1,
        column2,
@@ -68,4 +67,4 @@ SELECT DISTINCT column3, column4, column8, column9,
 ) AS incorrectTrend
 FROM sourceWihtTrendFilter AS b 
 GROUP BY column3, column4, column1, column8, column9, column5, column6, column7
-{% endhighlight %}
+```

@@ -1,14 +1,13 @@
 ---
-layout: post
 title: '发布项目到服务器-2'
 tags:
   - issue
-hero: https://source.unsplash.com/collection/145102/
-overlay: green
+categories:
+  - issue
 ---
 &emsp;&emsp;解决了 [昨天的问题](/posts/publis-project-to-service-1),成功把项目发布到了80端口,可是发现进来默认是我第一个玩具项目,
 于是尝试把项目切换到一个新端口上,可是问题又出现了.
-<!–-break-–>
+
 
 ## 问题出现
 &emsp;&emsp;和前一样要把项目发布到特定的端口上,就需要配置nginx.很快找到了发布项目到服务器上的 [参考资料](https://segmentfault.com/a/1190000019442994) 
@@ -29,7 +28,7 @@ overlay: green
 
 ## 附上我的Nginx的配置文件
 这是我有别于 [参考资料](https://segmentfault.com/a/1190000019442994) 的nginx配置文件,其他配置和其一致
-{% highlight bash %}
+```bash 
 server {
 
   listen 8000; // 端口号
@@ -44,5 +43,5 @@ server {
     try_files $uri $uri/ =404;
   }
 }
-{% endhighlight %}
+```
 

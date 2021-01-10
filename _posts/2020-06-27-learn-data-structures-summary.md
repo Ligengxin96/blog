@@ -1,17 +1,16 @@
 ---
-layout: post
 title: '学习数据结构后的一些理解和想法总结'
 tags:
   - learning
   - thinking
-hero: https://source.unsplash.com/collection/145132/
-overlay: orange
+categories:
+  - thinking
 ---
 
 &emsp;&emsp;最近归零后重新学习的数据结构,根据同事推荐的某老师的数据结构视频学习后有总醍醐灌顶的感觉.总结学习后一些理解和想法.
 
 (注: 老师是用java实现的一些,目的是了解原理,而不是实现java里面的一些数据结构)
-<!–-break-–>
+
 
 ## 数组
 &emsp;&emsp;对于最常用的数据结构之一的

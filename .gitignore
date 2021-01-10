@@ -1,10 +1,7 @@
-# Generated site
-/_site
+# hidden files
+.*
+!.github
 
-# Local packages
-/.bundle/ruby/
-
-# Temporary files
-.sass-cache/
-.jekyll-metadata
-.jekyll-cache
+# jekyll cache
+_site
+vendor

@@ -1,14 +1,13 @@
 ---
-layout: post
 title: '常用vscode配置和git命令备忘'
 tags:
   - tools
   - tutorial
-hero: https://source.unsplash.com/collection/145169/
-overlay: blue
+categories:
+  - tutorial
 ---
 &emsp;&emsp;记录下需要容易忘记但又常用的vscode配置和git命令.
-<!–-break-–>
+
  
 ## Git 命令行
 
@@ -25,7 +24,7 @@ overlay: blue
 
 ### 调试Jest测试框架的某个单元测试TS文件
 
-{% highlight json %}
+```json 
 {
   "type": "node",
   "name": "Debug Jest Test",
@@ -39,11 +38,11 @@ overlay: blue
   "disableOptimisticBPs": true,
   "program": "${workspaceFolder}/node_modules/jest/bin/jest"
 }
-{% endhighlight %}
+```
 
 ### 调试Mocha测试框架的某个单元测试TS文件
 
-{% highlight json %}
+```json 
 {
   "type": "node",
   "request": "launch",
@@ -61,11 +60,11 @@ overlay: blue
   "envFile": "${workspaceFolder}/../.env",
   "protocol": "inspector"
 }
-{% endhighlight %}
+```
 
 ### 调试Mocha测试框架的某个单元测试JS文件
 
-{% highlight json %}
+```json 
 {
   "type": "node",
   "request": "launch",
@@ -75,11 +74,11 @@ overlay: blue
   "console": "integratedTerminal",
   "internalConsoleOptions": "neverOpen"
 }
-{% endhighlight %}
+```
 
 ### 调试Mocha测试框架的某个文件夹的所以单元测试JS文件
 
-{% highlight json %}
+```json 
 {
   "type": "node",
   "request": "launch",
@@ -89,11 +88,11 @@ overlay: blue
   "console": "integratedTerminal",
   "internalConsoleOptions": "neverOpen"
 }
-{% endhighlight %}
+```
 
 ### 调试当前TS文件
 
-{% highlight json %}
+```json 
 {
   "type": "node",
   "request": "launch",
@@ -111,11 +110,11 @@ overlay: blue
   "envFile": "${workspaceFolder}/../.env",
   "protocol": "inspector"
 }
-{% endhighlight %}
+```
 
 ### 调试当前JS文件
 
-{% highlight json %}
+```json 
 {
   "type": "node",
   "request": "launch",
@@ -133,6 +132,6 @@ overlay: blue
   "envFile": "${workspaceFolder}/../.env",
   "protocol": "inspector"
 }
-{% endhighlight %}
+```
 
 ### continuous update...

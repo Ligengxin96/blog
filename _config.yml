@@ -1,124 +1,209 @@
-# Base blog settings
-baseurl                      : "" # the subpath of your site,                         # e.g. /blog/
-                              # set to '' in case of hosting on GitHub
-url                          : "https://ligengxin96.github.io/blog" # the base hostname & protocol for your site
-                                  # `http://<username>.github.io` - for GitHub
-
-blog:
-  title                      : 🐤的成长之路
-  description                  : >
-                               Copyright Ligengixin96@gmail.com
-
-# Layout configuration
-  logo_path                  : "assets/img/dactl.svg" # path to logo file
-  search_path                : "blog.ligengxin.me" # "yourgitusername.github.io"
-                               # needed for searchbox in archive page
-  hero_layout                : true # turn on hero layout for blog and posts
-  hero_placeholder           : "assets/img/generic_hero.jpg" # placeholder for hero image
-  excerpts                   : true # show excerpts instead of full post content on blog page
-  inline_footnotes           : true # enable/disable barefoot inline footnotes
-  titles_only                : false # show post titles only on main blog page
-
-# Fonts
-  font                       : '"Rubik", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif'
-  load_google_fonts          : 'Rubik:400,400italic,700,700italic'
+# The Site Settings
+# v2.0
+# https://github.com/cotes2020/jekyll-theme-chirpy
+# © 2017-2019 Cotes Chung
+# MIT licensed
 
 
-# Author info
-author:
-  fullname                  : ligengxin
-  rss                       : true # generate RSS feed and show it's icon in header
-  mail                      : Ligengxin96@gmail.com # change to your e-mail address
-  twitter                   : Ligengxin1
-  github                    : Ligengxin96
-  # youtube                   : youtube-user-name
-  # stackoverflow             : stackoverflow-user-name
-  disqus                    : dactl # your disqus site name
-  google_analytics          : # 'UA-XXXXXXXX-X'
-  photo                     : "uploads/me2.png"
-  photo2x                   : "uploads/me.png"
+# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+# --------------------------
+title:  Ligengxin's Blog                          # the main title
+
+tagline: Be a programmer Don't be a cruder   # it will display as the sub-title
+
+description: >-                        # used by seo meta and the atom feed
+  A minimal, portfolio, sidebar,
+  bootstrap Jekyll theme with responsive web design
+  and focuses on text presentation.
+
+# fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
+url: ''
+
+author: Gengxin Li                 # change to your full name
+
+github:
+  username: Ligengxin96             # change to your github username
+
+twitter:
+  username: Ligengxin1            # change to your twitter username
+
+social:
+  name: Gengxin Li                 # it will shows as the copyright owner in Footer
+  email: ligengxin96@gmail.com             # change to your email address
+  links:
+    # The first element serves as the copyright owner's link
+    - https://twitter.com/Ligengxin1      # change to your twitter homepage
+    - https://github.com/Ligengxin96       # change to your github homepage
+    # Uncomment below to add more social links
+    # - https://www.facebook.com/username
+    # - https://www.linkedin.com/in/username
+
+google_site_verification: google_meta_tag_verification # change to your verification string
+# --------------------------
 
 
+# Only if your site type is GitHub Project sites and doesn't have a custom domain,
+# change below value to '/projectname'.
+baseurl: ''
 
-## !!
-## Advanced blog settings
-## You should not change anything here unless you know what you are doing
+# Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
+timezone: Asia/Shanghai
 
-# Gems
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-admin
-  - jekyll-seo-tag
-  - jekyll-feed
+google_analytics:
+  id: ''          # Fill with your Google Analytics ID
+  pv:
+    # The Google Analytics pageviews switch.
+    # DO NOT enable it unless you know how to deploy the Google Analytics superProxy.
+    enabled: false
+    # the next options only valid when `google_analytics.pv` is enabled.
+    proxy_url: ''
+    proxy_endpoint: ''
+    cache: false  # pv data local cache, good for the users from GFW area.
 
-# Permalinks
-permalink                    : posts/:slug
+disqus:
+  comments: false  # boolean type, the global switch for posts comments.
+  shortname: ''    # Fill with your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
-# Posts
-excerpt_separator            : <!–-break-–>
 
-# Pagination
-paginate                     : 5
-paginate_path                : '/page-:num/'
+# Prefer color scheme setting.
+#
+# Note: Keep empty will follow the system prefer color by default,
+# and there will be a toggle to switch the theme between dark and light
+# on the bottom left of the sidebar.
+#
+# Available options:
+#
+#     light  - Use the light color scheme
+#
+#     dark   - Use the dark color scheme
+#
+theme_mode: # [light|dark]
 
-# Tags
-collections:
-  my_tags:
-    output: true
-    permalink: /tag/:slug/
-defaults:
-  -
-    scope:
-      path: ""
-      type: my_tags
-    values:
-      layout: blog-by-tag
+# The CDN endpoint for images.
+# Notice that once it is assigned, the CDN url
+# will be added to all image (site avatar & posts' images) paths starting with '/'
+#
+# e.g. 'https://cdn.com'
+img_cdn: ''
 
-# Handling Reading
-exclude                    : ["README.md", "README.html"]
+# the avatar on sidebar, support local or CORS resources
+avatar: https://avatars3.githubusercontent.com/u/46650314?s=460&u=fe0b26243b450e677f5b3bc9c97c6c5c2d9a81a4&v=4
 
-# https://github.com/jekyll/jekyll/issues/4619
-# Markdown and highlighter settings
-markdown: kramdown
-# !github-pages! mandatory › https://help.github.com/articles/using-jekyll-with-pages/#configuration-settings-you-cannot-change
-# Since Jekyll 3 the default highlighter is Rouge (replaced Pygments.rb in v44)
-highlighter: rouge
+# boolean type, the global switch for ToC in posts.
+toc: true
 
-# More › http://kramdown.gettalong.org/quickref.html
-# Options › http://kramdown.gettalong.org/options.html
+paginate: 10
+
 kramdown:
-  input:          GFM
-  # https://github.com/jekyll/jekyll/pull/4090
   syntax_highlighter: rouge
-
-  # Rouge Highlighter in Kramdown › http://kramdown.gettalong.org/syntax_highlighter/rouge.html
-  # span, block element options fall back to global
-  syntax_highlighter_opts:
-    # Rouge Options › https://github.com/jneen/rouge#full-options
-    # css_class: 'highlight'
-    #line_numbers: true # bad idea, spans don't need linenos and would inherit this option
+  syntax_highlighter_opts:   # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: highlight
+    # default_lang: console
     span:
       line_numbers: false
     block:
       line_numbers: true
       start_line: 1
 
-# Sass settings
-sass:
-  sass_dir                : _sass
-  style                   : compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+# DO NOT change this unless you're a Pro user on Jekyll and Web development,
+# or you think you're smart enough to change other relevant URLs within this template.
+permalink: /posts/:title/
 
-# HTML Compression
-# - http://jch.penibelst.de/
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+
+defaults:
+  -
+    scope:
+      path: ''          # An empty string here means all files in the project
+      type: posts
+    values:
+      layout: post
+      comments: true    # Enable comments in posts.
+      toc: true         # Display TOC column in posts.
+      breadcrumb:
+        -
+          label: Posts
+          url: /
+  -
+    scope:
+      path: _drafts
+    values:
+      comments: false
+  -
+    scope:
+      path: index.html
+    values:
+      breadcrumb:
+        -
+          label: Posts
+  -
+    scope:
+      path: tags
+    values:
+      breadcrumb:
+        -
+          label: Home
+          url: /
+        -
+          label: Tags
+          url: /tabs/tags/
+  -
+    scope:
+      path: categories
+    values:
+      breadcrumb:
+        -
+          label: Home
+          url: /
+        -
+          label: Categories
+          url: /tabs/categories/
+  -
+    scope:
+      path: ''
+      type: tabs             # see `site.collections`
+    values:
+      layout: page
+      dynamic_title: true    # Hide title in mobile screens.
+      breadcrumb:
+        -
+          label: Home
+          url: /
+
+sass:
+  sass_dir: /assets/css
+  style: compressed
+
 compress_html:
-  clippings               : all
-  endings                 : all
-  comments                : ["<!-- ", " -->"]
-  blanklines              : true
-  profile                 : false
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
   ignore:
-  envs                    : [local]
+    envs: [development]
+
+exclude:
+  - vendor
+  - Gemfile.lock
+  - Gemfile
+  - tools
+  - docs
+  - README.md
+  - LICENSE
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
 
 # gitalk
 gitalk:
@@ -129,3 +214,4 @@ gitalk:
   admin                   : 'Ligengxin96'
   id                      : location.pathname
   distractionFreeMode     : false
+

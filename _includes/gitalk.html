@@ -1,0 +1,15 @@
+<div id="gitalk-container"></div>
+
+<script>
+const gitalk = new Gitalk({
+    clientID: 'ef43f800a04cc65684b8',
+    clientSecret: 'eb71cbb94119b98399fc75ff41ebc047730207d8',
+    repo: 'Ligengxin96.github.io',
+    owner: 'Ligengxin96',
+    admin: ['Ligengxin96'],
+    id : location.pathname,
+    distractionFreeMode: false
+})
+
+gitalk.render('gitalk-container')
+</script>

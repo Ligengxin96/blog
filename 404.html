@@ -1,23 +1,25 @@
 ---
+# The 404 page
+# v2.0
+# https://github.com/cotes2020/jekyll-theme-chirpy
+# © 2017-2019 Cotes Chung
+# MIT License
 layout: page
-title: 404
-sitemap:
-  exclude: 'yes'
-published: true
+title: "404: Page not found"
+permalink: /404.html
+
+redirect_from:  # part of site.sitemap_exclude
+  - /norobots/
+  - /assets/
+  - /tabs/
+  - /categories/
+  - /tags/
+  - /posts/
+
+dynamic_title: true
 ---
-<div class="page">
 
-    <h2 class="go-home">
-    Error 404
-    </h2>
-    <h3 class="go-home">
-      I'm not sure how you got here, but you should head <a href="/">home</a>.
-    </h3>
-
+<div class="lead">
+  <p>Sorry, we've misplaced that URL or it's pointing to something that doesn't exist. </p>
+  <p><a href="{{ site.baseurl }}/">Head back Home</a> to try finding it again, or search for it on the <a href="{{ site.baseurl }}/tabs/archives">Archives page</a>.</p>
 </div>
-
-
-<!-- Adding the glitch effect -->
-<script>
-    document.getElementsByTagName('body')[0].classList.add('glitch');
-</script>

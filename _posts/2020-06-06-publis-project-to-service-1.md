@@ -1,13 +1,12 @@
 ---
-layout: post
 title: '发布项目到服务器-1'
 tags:
   - issue
-hero: https://source.unsplash.com/collection/145103/
-overlay: purple
+categories:
+  - issue
 ---
 &emsp;&emsp;趁着今年6.18从活动上车了华为云,满怀欣喜的想要大干一场---把自己项目发布到服务器上去.万万没想到第一步访问自己服务器都出现了问题.
-<!–-break-–>
+
 ## 问题出现
 &emsp;&emsp;今天刚买服务器,想着赶紧吧自己的玩具项目发布上去.然后果断打开远程工具连接上了服务器根据
 [安装nginx的教程](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04) 装好了ngnix.

@@ -1,13 +1,12 @@
 ---
-layout: post
 title: '第一年的工作经历和想法(2019-2020)'
 tags:
   - thinking
-hero: /assets/img/2020/05-13/2019.png
-overlay: orange
+categories:
+  - thinking
 ---
 &emsp;&emsp;聊聊我在工作一年的经历和想法
-<!–-break-–>
+
 
 ## 2019-04-01 实习在于武汉某家总部位于福州的传统金融IT企业
 

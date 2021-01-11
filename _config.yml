@@ -204,14 +204,3 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
-
-# gitalk
-gitalk:
-  clientID                : 'ef43f800a04cc65684b8'
-  clientSecret            : '60713915b72af48819c6e0389766198a7410ee48'
-  repo                    : 'Ligengxin96.github.io'
-  owner                   : 'Ligengxin96'
-  admin                   : 'Ligengxin96'
-  id                      : location.pathname
-  distractionFreeMode     : false
-

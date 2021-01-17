@@ -15,14 +15,14 @@ categories:
 * React为什么要封装自己的事件机制,有什么好处呢?
   1. 最主要的原因还是因为需要跨浏览器兼容,Java 之所以兼容全平台就是因为代码其实不是跑直接跑在机器上的,而是跑在机器上运行的JVM上的.所以可以把SyntheticEvent对象比喻成JVM,这样就能在任何机器(浏览器)处理相同的代码(事件)
   2. 性能优化,React 的事件机制把**几乎**所以事件绑定在document对象上,而不像原生事件是在DOM对象本身,所以简化了DOM事件的处理机制,减少了内存开销.
-***几乎: *** 
+***几乎所有事件都代理到了 document，说明有例外，比如audio、video标签的一些媒体事件（如 onplay、onpause 等），是 document 所不具有，这些事件只能够在这些标签上进行事件进行代理，但依旧用统一的入口分发函数（dispatchEvent）进行绑定*** 
 
 ## 2.CSS 相关介绍
 &emsp;&emsp; 不知道为什么对CSS相关的内容我有一种抗拒感,就简单聊聊学到的一个应该有用知识点
 * 实现 CSS 与 JavaScript 变量共享
 
 可以用 :export 关键字可以把 CSS 中的变量输出到 JavaScript 中，例如：
-```js
+```jsx
 /* config.scss */
 
 $primary-color: #f40;
@@ -38,7 +38,7 @@ console.log(style.primaryColor);
 ## 3.组件通信
 * 父组件向子组件通信
 1. 这个无需多言 props
-2. 当嵌套多层组件后使用,层层传递props显得不是很优雅,所以可以使用context,使用 context 比较好的场景是真正意义上的全局信息且不会更改，例如界面主题、用户信息等
+2. 当嵌套多层组件后使用,层层传递props显得不是很优雅,所以可以使用context,使用 context 比较好的场景是真正意义上的全局信息且不会更改，例如界面主题、用户信息等. [Context使用实例](##Context使用实例)
 
 * 子组件向父组件通信
 1. 可以使用回调函数
@@ -59,7 +59,7 @@ console.log(style.primaryColor);
 
 使用ShouldComponentUpdate这个生命周期方法来减少组件重新Render次数是一个常见的性能优化方法.一个用下面的简单代码举个例子,P组件下有C1和C2两个子组件,C1只得到了P组件的state中countC1这个值,而C2只得到了P组件的state中countC2这个值,当不手动重写ShouldComponentUpdate方法话,当P组件的State的只改变了countC1的值改变都会导致C1和C2都重新Render,尽管C2组件状态没任何变化
 
-```js
+```jsx
 // P组件的State
 this.state = {
   countC1: 0, // 只传递给C1组件
@@ -69,7 +69,7 @@ this.state = {
 
 所以要想C2组件避免不必要的渲染,只需要给C2组件重写shouldComponentUpdate生命周期函数,这样当P组件的State的只改变了countC1的值的时候就不会导致C2组件重新Render了.
 
-```js
+```jsx
 // C2组件中添加的shouldComponentUpdate生命周期函数
 shouldComponentUpdate(nextProps) {
   return this.props.countC2 !== nextProps.countC2;
@@ -127,7 +127,7 @@ assert.equal(Object.is(map1, map2), false);
 assert.equal(is(map1, map2), true);
 ```
 
-```js
+```jsx
 // 这样做的话需要用 immutable 封装一次js原生的 props 和 state 对象
 import { is } from 'immutable';
 
@@ -155,8 +155,66 @@ shouldComponentUpdate (nextProps = {}, nextState = {}) => {
 }
 ```
 
+## 6.Context使用实例
 
-## 6.Ref
+话不多说直接上代码
+
+```jsx
+// 父组件代码
+import React from 'react';
+import { Tabs } from 'antd';
+import useFetchUploadAccess from '@/hooks/useFetchUploadAccess';
+import UploadCommonScript from './uploadCommonScript';
+import UploadRoleScript from './uploadRoleScript';
+
+const { TabPane } = Tabs;
+
+ // 在父组件(顶层组件)创建一个 Context  [] 是这个Context的默认值
+export const UploadAccessInfoContext = React.createContext([]);
+
+const UploadScript = ({ getCommonFormValue, geRoleFormValue }) => {
+  const [uploadAccessInfo] = useFetchUploadAccess();
+  
+  return (
+    <>
+      <Tabs defaultActiveKey="1" size="large" centered>
+        <TabPane tab="tab1" key="1">
+         { /* UploadAccessInfoContext.Provider 包装下子组件 value 就是你传递给这个父组件下面所以子组件的props */}
+          <UploadAccessInfoContext.Provider value={[uploadAccessInfo]}>
+            <UploadCommonScript ref={getCommonFormValue} />
+          </UploadAccessInfoContext.Provider>
+        </TabPane>
+        { /* ... */}
+      </Tabs>
+    </>
+  );
+};
+
+export default UploadScript;
+```
+
+```jsx
+// 子组件代码
+import React, { useContext } from 'react';
+import AliOSSUpload from '@/components/Common/AliOSSUpload';
+import { UploadAccessInfoContext } from '声明了Context组件(定成父组件的)的路径';
+
+
+const UploadCommonScript = (props) => {
+  // 使用useContext就能直接取到顶层父组件传递下来的props 避免了层层传递props的麻烦
+  const [uploadAccessInfo] = useContext(UploadAccessInfoContext);
+  return (
+    <>
+      <AliOSSUpload {...props} uploadAccessInfo={uploadAccessInfo} />
+    </>
+  );
+};
+
+export default UploadCommonScript;
+
+```
+
+## 7.Ref
 1. [React Document](https://reactjs.org/docs/handling-events.html)
 2. [immutable-js docs](https://immutable-js.github.io/immutable-js/docs/#/)
 3. [博客园](https://www.cnblogs.com/forcheng/p/13187388.html)

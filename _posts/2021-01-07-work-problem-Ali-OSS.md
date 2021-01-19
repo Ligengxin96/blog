@@ -1,5 +1,5 @@
 ---
-title: '前端使用Ant design upload组件上传文件到阿里云OSS的坑'
+title: '前端使用Ant design Upload组件上传文件到阿里云OSS的坑'
 tags:
   - issue
 categories:
@@ -32,7 +32,7 @@ var signature = Crypto.util.bytesToBase64(bytes);
 果然我一修改后,就上传成功了.[完整上传组件代码请查看附录](#2附录)
 
 ## 2.附录
-自己封装了上传文件到阿里云OSS的 Ant design upload组件的代码
+自己封装了上传文件到阿里云OSS的 Ant design Upload组件的代码
 ```jsx
 import React, { useState, useEffect } from 'react';
 import { Upload, Button, message } from 'antd';

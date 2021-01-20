@@ -44,7 +44,7 @@ const normFile = (e) => {
 
 ```
 
-&emsp;&emsp;我发现这个getValueFromEvent属性是有别于别的基础组件(Input之类的),这个是特别为Upload组件新加的.然后看getValueFromEvent属性的值是normFile.我看到这个normFile是一个函数,我就反应过来了.应该是Form组件封装了一些东西可以吧normFile当回调函数传递给Upload属性.想到这里果断开始Debug,猜的没错只要Form.Item给了`getValueFromEvent={normFile}` 这个属性, Upload组件Props中会多出一个onChange回调函数这个属性.那么我们在Upload组件中使用这个onChange这个函数呢?猜了下,在Upload组件中的onChange中使用,然后我一试,果然在Form组件这个文件的normFile函数输出了文件信息.当然我的这个业务场景也没这么简单,我还需要使用到Ref.[详细代码](#3附录)
+&emsp;&emsp;我发现这个getValueFromEvent属性是有别于别的基础组件(Input之类的),这个是特别为Upload组件新加的.然后看getValueFromEvent属性的值是normFile.我看到这个normFile是一个函数,我就反应过来了.应该是Form组件封装了一些东西可以吧normFile当回调函数传递给Upload组件.想到这里果断开始Debug,猜的没错只要Form.Item给了`getValueFromEvent={normFile}` 这个属性, Upload组件Props中会多出一个onChange回调函数这个属性.那么我们在Upload组件中使用这个onChange这个函数呢?猜了下,在Upload组件中的onChange中使用,然后我一试,果然在Form组件这个文件的normFile函数输出了文件信息.当然我的这个业务场景也没这么简单,我还需要使用到Ref.[详细代码](#3附录)
 
 ## 3.附录
 

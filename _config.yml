@@ -9,10 +9,11 @@
 # --------------------------
 title:  Ligengxin's Blog                          # the main title
 
-tagline: Be a programmer Don't be a cruder   # it will display as the sub-title
+tagline: Be a programmer Don't be a CRUDer   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, portfolio, sidebar,
+  This is Ligengxin's Blog, help myself record and share my knowledge.
+  This Blog is a minimal, portfolio, sidebar,
   bootstrap Jekyll theme with responsive web design
   and focuses on text presentation.
 

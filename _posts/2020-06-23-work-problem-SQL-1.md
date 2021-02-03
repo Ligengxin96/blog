@@ -3,7 +3,7 @@ title: '存储过程入参默认值问题'
 tags:
   - Transact-SQL
 categories:
-  - issue
+  - Issue
 ---
 &emsp;&emsp;简单记录下一个因为存储过程默认值问题导致浪费时间在一段没问题的存储过程中找问题的事情.
 

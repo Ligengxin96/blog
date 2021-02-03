@@ -4,8 +4,7 @@ tags:
   - React.js
   - Ant Design
 categories:
-  - tutorial
-  - technology
+  - Technology
 ---
 
 &emsp;&emsp;简述下我的业务场景,一个Modal组件中使用了Form组件,而这个Form组件又包含了一些别的组件,然后在点击Modal的确认按钮把Form表单的数据全部发送给Api.

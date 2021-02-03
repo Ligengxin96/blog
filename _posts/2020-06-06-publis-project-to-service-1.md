@@ -3,7 +3,7 @@ title: '发布项目到服务器-1'
 tags:
   - HUAWEI Cloud
 categories:
-  - issue
+  - Issue
 ---
 &emsp;&emsp;趁着今年6.18从活动上车了华为云,满怀欣喜的想要大干一场---把自己项目发布到服务器上去.万万没想到第一步访问自己服务器都出现了问题.
 

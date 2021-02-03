@@ -3,7 +3,7 @@ title: '常用正则'
 tags:
   - Regex
 categories:
-  - technology
+  - Technology
 ---
 记录下工作中用到的或者其他常用的正则
 

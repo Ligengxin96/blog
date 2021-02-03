@@ -3,8 +3,7 @@ title: '学习数据结构后的一些理解和想法总结'
 tags:
   - Data Structure
 categories:
-  - learning
-  - thinking
+  - Learning
 ---
 
 &emsp;&emsp;最近归零后重新学习的数据结构,根据同事推荐的某老师的数据结构视频学习后有总醍醐灌顶的感觉.总结学习后一些理解和想法.

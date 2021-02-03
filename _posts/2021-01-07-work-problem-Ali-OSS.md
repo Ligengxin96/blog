@@ -5,7 +5,7 @@ tags:
   - React.js
   - Ant Design
 categories:
-  - issue
+  - Issue
 ---
 &emsp;&emsp;业务需求需要上传文件,那就想办法整呗,一顿操作过后选择了阿里云OSS.
 

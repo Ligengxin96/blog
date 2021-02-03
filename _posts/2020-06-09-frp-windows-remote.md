@@ -3,9 +3,8 @@ title: '使用frp实现windows远程桌面连接'
 tags:
   - FRP
 categories:
-  - tools
-  - tutorial
-  - technology
+  - Tools
+  - Tutorial
 ---
 &emsp;&emsp;公司不允许安装非授权的软件,所以迫于无奈,只能放弃teamviewer这些远程软件,只能使用window自带的远程桌面.
 

@@ -3,9 +3,7 @@ title: '深入React技术栈第2章总结'
 tags:
   - React.js
 categories:
-  - reading
-  - learning
-  - thinking
+  - Learning
 ---
 &emsp;&emsp;深入React技术栈第2章总结
  

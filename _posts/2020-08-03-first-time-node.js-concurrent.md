@@ -4,7 +4,7 @@ tags:
   - Node.js
   - TypeScript
 categories:
-  - technology
+  - Technology
 ---
 &emsp;&emsp;最近的一个任务的部分内容是需要去读取多个文件中的数据(10个文件,平均每个文件250,000行数据,一共2500,000行数据),然后将这些数据作为payload发送给一个服务器.
 

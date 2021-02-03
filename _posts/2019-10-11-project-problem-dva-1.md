@@ -3,7 +3,7 @@ title: '项目踩坑-1'
 tags:
   - Dva.js
 categories:
-  - issue
+  - Issue
 
 ---
 &emsp;&emsp;负责的一个项目已经部署到客户的生产环境上测试了,接踵而来的是一系列的问题.这也算预料之中,无非是一些环境问题之类的.

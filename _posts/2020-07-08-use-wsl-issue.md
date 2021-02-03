@@ -4,7 +4,7 @@ tags:
   - WSL
   - WSL2
 categories:
-  - issue
+  - Issue
 ---
 &emsp;&emsp;使用wsl(Window Subsystem for linux)过程中遇到的问题和解决办法
 

@@ -5,7 +5,7 @@ tags:
   - Azure Function
   - Data Factory
 categories:
-  - issue
+  - Issue
 ---
 &emsp;&emsp;记录在使用Azure过程中遇到的的一系列问题和解决办法.
  

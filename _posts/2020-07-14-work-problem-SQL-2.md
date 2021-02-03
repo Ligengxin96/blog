@@ -3,7 +3,7 @@ title: 'SQL Server中如何比较两个表中nullable(可空)字段'
 tags:
   - Transact-SQL
 categories:
-  - issue
+  - Issue
 ---
 &emsp;&emsp;今天遇到一个问题就是在两个表连接查询的时候.连接条件是A表的a字段等于B表的a字段,同时A表的b字段等于B表的b字段.因为这个b字段可为空,所以就算a字段是相同的如果b字段都是null,这条数据也是匹配不上的.但是需求是这条数据应该是匹配上的.
 

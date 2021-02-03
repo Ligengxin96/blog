@@ -1,7 +1,9 @@
 ---
 title: 'Azure 踩坑合集'
 tags:
-  - issue
+  - Azure
+  - Azure Function
+  - Data Factory
 categories:
   - issue
 ---

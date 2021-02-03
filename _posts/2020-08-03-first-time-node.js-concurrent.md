@@ -1,7 +1,8 @@
 ---
 title: '初识node.js并发'
 tags:
-  - technology
+  - Node.js
+  - TypeScript
 categories:
   - technology
 ---

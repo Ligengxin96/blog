@@ -1,7 +1,7 @@
 ---
 title: '存储过程入参默认值问题'
 tags:
-  - issue
+  - Transact-SQL
 categories:
   - issue
 ---

@@ -1,7 +1,7 @@
 ---
 title: '发布项目到服务器-1'
 tags:
-  - issue
+  - HUAWEI Cloud
 categories:
   - issue
 ---

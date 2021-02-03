@@ -1,7 +1,7 @@
 ---
 title: 'ubuntu18.04上安装mysql'
 tags:
-  - tutorial
+  - MySQL
 categories:
   - tutorial
 ---

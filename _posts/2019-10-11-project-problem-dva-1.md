@@ -1,7 +1,7 @@
 ---
 title: '项目踩坑-1'
 tags:
-  - issue
+  - Dva.js
 categories:
   - issue
 

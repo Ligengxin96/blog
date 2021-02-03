@@ -1,9 +1,9 @@
 ---
 title: '学习数据结构后的一些理解和想法总结'
 tags:
-  - learning
-  - thinking
+  - Data Structure
 categories:
+  - learning
   - thinking
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: '不需要下载激活软件,免费激活office 2019'
 tags:
-  - tutorial
-  - tools
+  - Office 2019
 categories:
+  - tools
   - tutorial
 ---
 &emsp;&emsp;在公司办公office 365用起来是真的舒服,今天在家突然发现电脑上没有,果断下载一个office 2019,本着能省则省的原则.Google了一个白嫖的方式,总结下写了一个傻瓜教程.

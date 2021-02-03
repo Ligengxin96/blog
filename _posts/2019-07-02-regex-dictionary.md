@@ -1,7 +1,7 @@
 ---
 title: '常用正则'
 tags:
-  - technology
+  - Regex
 categories:
   - technology
 ---

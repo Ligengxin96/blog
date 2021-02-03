@@ -1,9 +1,9 @@
 ---
 title: '常用vscode配置和git命令备忘'
 tags:
-  - tools
-  - tutorial
+  - VS Code
 categories:
+  - tools
   - tutorial
 ---
 &emsp;&emsp;记录下需要容易忘记但又常用的vscode配置和git命令.

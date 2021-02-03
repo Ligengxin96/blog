@@ -1,7 +1,9 @@
 ---
 title: '前端使用Ant design Upload组件上传文件到阿里云OSS的坑'
 tags:
-  - issue
+  - Ali-OSS
+  - React.js
+  - Ant Design
 categories:
   - issue
 ---

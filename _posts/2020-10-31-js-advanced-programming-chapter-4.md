@@ -1,11 +1,11 @@
 ---
 title: 'JavaScript高级程序设计第4章总结'
 tags:
+  - JavaScript
+categories:
+  - reading
   - thinking
   - learning
-  - reading
-categories:
-  - thinking
 ---
 &emsp;&emsp;看完JavaScript高级程序设计第4章一些总结和想法
 

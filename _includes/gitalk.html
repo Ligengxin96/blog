@@ -6,7 +6,8 @@ const gitalk = new Gitalk({
     owner: 'Ligengxin96',
     admin: ['Ligengxin96'],
     id : location.pathname,
-    distractionFreeMode: false
+    distractionFreeMode: false,
+    proxy: 'https://netnr-proxy.cloudno.de/https://github.com/login/oauth/access_token'
 });
 
 gitalk.render('gitalk-container')

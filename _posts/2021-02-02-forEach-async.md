@@ -1,7 +1,7 @@
 ---
 title: 'forEach中使用async/await'
 tags:
-  - Transact-SQL
+  - JavaScript
 categories:
   - Technology
 ---

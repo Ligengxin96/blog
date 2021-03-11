@@ -1,7 +1,8 @@
 ---
-title: 'SQL Server中中处理JSON数据'
+title: '使用Transact-SQL中处理JSON数据'
 tags:
-  - SQL Server
+  - Transact-SQL
+	- SQL Server
 categories:
   - Technology
 ---

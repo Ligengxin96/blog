@@ -1,6 +1,7 @@
 ---
 title: '一次复杂的需求的存储过程实现代码'
 tags:
+  - Transact-SQL
   - SQL Server
 categories:
   - Technology

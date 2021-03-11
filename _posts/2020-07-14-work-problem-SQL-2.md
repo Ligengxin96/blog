@@ -1,8 +1,8 @@
 ---
 title: 'SQL Server中如何比较两个表中nullable(可空)字段'
 tags:
-  - Transact-SQL
   - SQL Server
+  - Transact-SQL
 categories:
   - Issue
 ---

@@ -1,8 +1,8 @@
 ---
-title: '使用Transact-SQL中处理JSON数据'
+title: '使用SQL Server中处理JSON数据'
 tags:
+  - SQL Server
   - Transact-SQL
-	- SQL Server
 categories:
   - Technology
 ---
@@ -88,5 +88,4 @@ GROUP BY apiPath
 ![avatar](/assets/img/2021/02-27/02-27-3.png)
 
 ## 3.Ref
-1.[Transact-SQL
-	- SQL Server文档](https://docs.microsoft.com/en-us/sql/relational-databases/json/json-data-sql-server?view=sql-server-ver15)
+1.[Transact-SQL文档](https://docs.microsoft.com/en-us/sql/relational-databases/json/json-data-sql-server?view=sql-server-ver15)
